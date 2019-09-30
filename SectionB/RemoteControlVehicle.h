@@ -9,7 +9,7 @@ using namespace std;
   class RemoteControlVehicle {
 		
 	public:
-           RemoteControlVehicle() { on = false; };
+           RemoteControlVehicle();
            virtual void on()=0;
            virtual void off()=0;
            virtual void forward()=0;
