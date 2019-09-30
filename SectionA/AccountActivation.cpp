@@ -13,22 +13,22 @@ void AccountActivation::detach(Colleague* col){
 
 bool AccountActivation::getState(int id){
     vector<Colleague*> :: iterator it; 
-        for(it = observerList; it != observerList; ++it) {
+        for(it = getObserverList().begin(); it != getObserverList().end(); ++it) {
             if((*it)->getID() == id){
                 return (*it)->getActive();
             }
         }
-    return false; 
+    return false;  
 }
 
-void AccountActivation::setActivation(int id, bool activation){
+void AccountActivation::setActivation(int id, bool activation){ 
     int counter = 0;
     vector<Colleague*> :: iterator it; 
-        for(it = observerList; it != observerList; ++it) {
+        for(it = getObserverList().begin(); it != getObserverList().end(); ++it) {
             if((*it)->getID() == id){
                 activations[counter] = activation;
                 notify();
             }
-            counter++;
+            counter++; 
         }
-}
+} 

@@ -2,17 +2,19 @@
 #define COMPANY_H
 
 #include "Colleague.h"
+#include "AccountActivation.h"
 #include <vector>
 #include <string>
 
 using namespace std;
 
-  class Company : public Colleague {
+  class Company : private Colleague {
 		
 	public:
             Company(string, string);
             void addItem(string itemName, string category);
             void sendNotification(string Message, string itemName, string category);
+            string getName();
 
             //task3
             void update(); 

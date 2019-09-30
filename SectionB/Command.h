@@ -9,12 +9,12 @@ using namespace std;
 
   class Command {
 		
-	public:
+	  public:
             Command(RemoteControlVehicle*);
             virtual void execute()=0;
             virtual void undo()=0;
                           
-    private: 
+    protected: 
            RemoteControlVehicle* receiver;
           
 	};

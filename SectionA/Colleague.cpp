@@ -1,7 +1,8 @@
 #include "Colleague.h"
 #include <iostream>
 
-Colleague::Colleague(){
+Colleague::Colleague() {
+    currentID = ++id;
     vector<Mediator*> mediators;
     active = true;
 }
@@ -31,5 +32,7 @@ void Colleague::setSubject(AccountSettings* as){
 }
 
 int Colleague::getID(){
-    return id;
+    return currentID;
 }
+
+int Colleague::id = 0;

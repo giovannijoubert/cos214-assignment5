@@ -2,25 +2,25 @@
 #include <iostream>
 
 void RemoteControlCar::on(){
-    if(!on){
+    if(!On){
         cout << "RC car is turned on." << endl;
-        on = true;
+        On = true;
     } else {
         cout << "RC car HAS ALREADY BEEN turned on." << endl;
     }
 }
 
 void RemoteControlCar::off(){
-    if(on){
+    if(On){
         cout << "RC car is turned off." << endl;
-        on = true;
+        On = false;
     } else {
         cout << "RC car HAS ALREADY BEEN turned off." << endl;
     }
 }
 
 void RemoteControlCar::forward(){
-    if(on){
+    if(On){
         cout << "RC car drives forward quickly." << endl;
     } else {
         cout << "RC car cannot move forward - not turned on." << endl;
@@ -28,7 +28,7 @@ void RemoteControlCar::forward(){
 }
 
 void RemoteControlCar::backward(){
-    if(on){
+    if(On){
         cout << "RC car reverses backward carefully." << endl;
     } else {
         cout << "RC car cannot move backward - not turned on." << endl;

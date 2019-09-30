@@ -1,6 +1,7 @@
 #ifndef INDIVIDUAL_H
 #define INDIVIDUAL_H
 
+#include "AccountActivation.h"
 #include "Colleague.h"
 #include <vector>
 #include <string>
@@ -14,6 +15,7 @@ using namespace std;
             void addItem(string itemName, string category);
             void sendNotification(string Message, string itemName, string category);
 
+            string getName();
             //task3
             void update();
             

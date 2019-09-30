@@ -28,6 +28,10 @@ void Company::sendNotification(string Message, string itemName, string category)
     cout << companyName << " has been notified of " << itemName << " in the " << category << " marketplace." << endl;
 }
 
-void Individual::update(){
-    active = getSubject()->getState(id);
+void Company::update(){
+    active = ((AccountActivation*) getSubject())->getState(getID());
+}
+
+string Company::getName(){
+    return companyName;
 }

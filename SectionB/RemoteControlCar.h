@@ -14,9 +14,6 @@ using namespace std;
             void off();
             void forward();
             void backward();
-                          
-    private: 
-           bool on;
           
 	};
 

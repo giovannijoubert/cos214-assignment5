@@ -28,5 +28,9 @@ void Individual::sendNotification(string Message, string itemName, string catego
 }
 
 void Individual::update(){
-    active = getSubject()->getState(id);
+    active = ((AccountActivation*) getSubject())->getState(getID());
+}
+
+string Individual::getName(){
+    return name;
 }

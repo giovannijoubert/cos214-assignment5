@@ -10,6 +10,7 @@ using namespace std;
   class MoveBackward : public Command {
 		
 	public:
+             MoveBackward(RemoteControlVehicle* r) : Command(r){};
              void execute();
              void undo();
 	};

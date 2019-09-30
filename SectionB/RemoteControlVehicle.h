@@ -15,8 +15,8 @@ using namespace std;
            virtual void forward()=0;
            virtual void backward()=0;
                           
-    private: 
-           bool on;
+    protected: 
+           bool On;
           
 	};
 

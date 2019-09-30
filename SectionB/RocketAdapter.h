@@ -7,7 +7,7 @@
 
 using namespace std;
 
-  class RocketAdapter : RemoteControlVehicle {
+  class RocketAdapter : private RemoteControlVehicle {
 		
 	public:
            RocketAdapter(RemoteControlRocket*);

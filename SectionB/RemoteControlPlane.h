@@ -1,5 +1,5 @@
-#ifndef REMOTECONTROLCAR_H
-#define REMOTECONTROLCAR_H
+#ifndef REMOTECONTROLPLANE_H
+#define REMOTECONTROLPLANE_H
 
 #include "RemoteControlVehicle.h"
 #include <vector>
@@ -7,17 +7,13 @@
 
 using namespace std;
 
-  class RemoteControlCar : public RemoteControlCar {
+  class RemoteControlPlane : public RemoteControlVehicle {
 		
 	public:
             void on();
             void off();
             void forward();
             void backward();
-                          
-    private: 
-           bool on;
-          
 	};
 
 #endif

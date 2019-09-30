@@ -10,11 +10,21 @@ void AccountSettings::attach(Colleague* col){
 }
 
 void AccountSettings::detach(Colleague* col){
-    observerList.remove(col);
+    vector<Colleague*> :: iterator it; 
+        for(it = observerList.begin(); it != observerList.end(); ++it) {
+            if((*it) == col){
+                observerList.erase(it);
+            } 
+    }
+    
 }
 void AccountSettings::notify(){
     vector<Colleague*> :: iterator it; 
-        for(it = observerList; it != observerList; ++it) {
+        for(it = observerList.begin(); it != observerList.end(); ++it) {
             (*it)->update();
-    }
+        }
+}
+
+vector<Colleague*> AccountSettings::getObserverList(){
+    return observerList;
 }

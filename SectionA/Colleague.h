@@ -1,6 +1,9 @@
 #ifndef COLLEAGUE_H
 #define COLLEAGUE_H
 
+class AccountSettings;
+class Mediator;
+
 #include "AccountSettings.h"
 #include "Mediator.h"
 #include <vector>
@@ -17,7 +20,7 @@ using namespace std;
             virtual void sendNotification(string Message, string itemName, string category)=0;
             virtual void update()=0;
 
-            string getName();
+            virtual string getName()=0;
             vector<Mediator*> getMediators();
             void setLatestNotification(string);
             int getID();
@@ -27,13 +30,15 @@ using namespace std;
             AccountSettings* getSubject();
             void setSubject(AccountSettings*);
     
+    protected:
+            bool active;
+
     private: 
            vector<Mediator*> mediators;
            string latestNotification; 
-           int id; //TODO: IMPLEMENT static counter
+            static int id; //TODO: IMPLEMENT static counter
+            int currentID;
 
-           //task3
-           bool active;
            AccountSettings* subject;
 	};
 

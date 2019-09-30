@@ -2,5 +2,5 @@
 #include <iostream>
 
 RemoteControlVehicle::RemoteControlVehicle(){
-    on = false;
+    On = false;
 }
