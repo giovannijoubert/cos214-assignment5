@@ -10,12 +10,9 @@ using namespace std;
   class Notifier : public Mediator {
 		
 	public:
+            Notifier(string cat) : Mediator(cat){};
             void addItem(Colleague*, string itemName);
              
-    private: 
-           vector<Colleague*> colleagues;
-           string category; //a single concrete mediator’s category, e.g. ”cars” or ”furniture”
-            
 	};
 
 #endif

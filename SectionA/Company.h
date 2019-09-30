@@ -8,7 +8,7 @@
 
 using namespace std;
 
-  class Company : private Colleague {
+  class Company : public Colleague {
 		
 	public:
             Company(string, string);

@@ -12,3 +12,7 @@ void Mediator::addColleague(Colleague* colg){
 string Mediator::getCategory(){
     return category;
 }
+
+vector<Colleague*> Mediator::getColleagues(){
+    return colleagues;
+}

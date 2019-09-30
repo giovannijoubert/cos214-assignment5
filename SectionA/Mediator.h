@@ -14,6 +14,7 @@ using namespace std;
             void addColleague(Colleague*);
             virtual void addItem(Colleague*, string itemName)=0;
             string getCategory();
+            vector<Colleague*> getColleagues();
             
     private: 
            vector<Colleague*> colleagues;

@@ -7,7 +7,7 @@ void AccountActivation::attach(Colleague* col){
 }
 
 void AccountActivation::detach(Colleague* col){
-    //TODO: detach activations value of col
+    activations.erase(activations.begin() + col->getID());
     AccountSettings::detach(col);
 }
 
