@@ -16,7 +16,7 @@ using namespace std;
             void notify();
                           
     private: 
-           vector<Observer*> observerList;
+           vector<Colleague*> observerList;
           
 	};
 

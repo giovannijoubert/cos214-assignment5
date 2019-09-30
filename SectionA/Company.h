@@ -10,6 +10,7 @@ using namespace std;
   class Company : public Colleague {
 		
 	public:
+            Company(string, string);
             void addItem(string itemName, string category);
             void sendNotification(string Message, string itemName, string category);
 

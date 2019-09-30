@@ -13,6 +13,7 @@ using namespace std;
             Mediator(string cat);
             void addColleague(Colleague*);
             virtual void addItem(Colleague*, string itemName)=0;
+            string getCategory();
             
     private: 
            vector<Colleague*> colleagues;
