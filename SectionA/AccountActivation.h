@@ -11,6 +11,7 @@ using namespace std;
   class AccountActivation : public AccountSettings {
 		
 	public:
+            AccountActivation();
             void attach(Colleague*);
             void detach(Colleague*);
             bool getState(int id);

@@ -1,6 +1,10 @@
 #include "AccountActivation.h"
 #include <iostream>
 
+AccountActivation::AccountActivation(){
+    vector<bool> activations;
+}
+
 void AccountActivation::attach(Colleague* col){
     activations.push_back(col->getActive());
     AccountSettings::attach(col);
@@ -12,23 +16,10 @@ void AccountActivation::detach(Colleague* col){
 }
 
 bool AccountActivation::getState(int id){
-    vector<Colleague*> :: iterator it; 
-        for(it = getObserverList().begin(); it != getObserverList().end(); ++it) {
-            if((*it)->getID() == id){
-                return (*it)->getActive();
-            }
-        }
-    return false;  
+    return activations.at(id); 
 }
 
 void AccountActivation::setActivation(int id, bool activation){ 
-    int counter = 0;
-    vector<Colleague*> :: iterator it; 
-        for(it = getObserverList().begin(); it != getObserverList().end(); ++it) {
-            if((*it)->getID() == id){
-                activations[counter] = activation;
-                notify();
-            }
-            counter++; 
-        }
+    activations[id-1] = activation;
+    notify();
 } 

@@ -12,20 +12,17 @@ int main(){
     Individual* Hendrik = new Individual("Hendrik");
     Individual* Frik = new Individual("Frik");
 
-    Notifier* notifier1 = new Notifier("Dairy");
-    Checkers->addMediator(notifier1);
+    Notifier* notifier = new Notifier("Dairy");
+    notifier->addColleague(Checkers);
+    notifier->addColleague(Ruan);
+    notifier->addColleague(Frik);
+
+    Checkers->addMediator(notifier);
+
     Checkers->addItem("Milk", "Dairy");
 
-    Notifier* notifier2 = new Notifier("Dairy");
-    Ruan->addMediator(notifier2);
-    Ruan->addItem("Cheese", "Dairy");
-
-    Frik->addItem("Dog", "Animals");
-
     AccountActivation * accountactivation = new AccountActivation();
-    accountactivation->attach(Frik);
+    accountactivation->attach(Checkers);
     accountactivation->attach(Ruan);
-
-    Frik->sendNotification("New Item", "Milk", "Dairy");
-
+    
 }
